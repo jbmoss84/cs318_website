@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* CSS Document */
-
 .home-bg {
 	background-color: rgba(25,200,50, 0.6);
 }
@@ -33,10 +32,10 @@
 .navbar {
 	background-color: rgba(17, 126, 255, 0.6);
 	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
 	margin-bottom: 3%;
-
+	box-shadow: none;
 }
+
 
 #icon {
 	position: absolute;
@@ -44,6 +43,7 @@
 	border-radius: 10px;
 	left: 0px;
 	top: 5px;
+	display: none;
 }
 
 .navbar-brand {
@@ -51,12 +51,19 @@
 }
 
 .navbar-default {
-
 	width: 100%;
 	border: none;
 	border-radius: 0px;
 	font-size: 1.1em;
 	z-index: 100;
+}
+
+.navbar-default ul {
+	position:absolute;
+	top: -85px;
+	left: 325px;
+	font-size: 18px;
+
 }
 
 .jumbotron {
@@ -73,13 +80,12 @@
 
 }
 .jumbotron img {
-    display: block;
-    margin-left: auto;
+  display: block;
+	margin-left: 5%;
 	margin-right: auto;
 	margin-top: 0px;
-    width: 200px;
-
-
+  width: 200px;
+	z-index: 3;
 }
 
 .bottomTag {
@@ -99,10 +105,31 @@
 .affix {
   top: 0;
   width: 100%;
-  }
+}
+
+.affix #icon {
+	display: block;
+	transition: display 2s;
+}
 
 .affix + .container-fluid {
 	padding-top: 90px;
+}
+
+.affix .navbar {
+	backdrop-filter: blur(10px);
+}
+
+.affix ul {
+	transition: position 3s;
+	position: absolute;
+	top: 0px;
+	left: 40px;
+	font-size: 14px;
+}
+
+.active a {
+	border-radius: 50px;
 }
 
 
@@ -210,11 +237,9 @@
 		width: 48%;
 		border-radius: 50px;
 		margin: 1%;
-		margin-top: 5%;
 		margin-bottom: 5%;
 		height: 400px;
 	}
-
 
 	#blogWell {
 		width: 575px;
@@ -268,6 +293,15 @@
 	}
 	.jumbotron img {
 		width: 175px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.navbar-default ul {
+		position:relative;
+		top: 0px;
+		left: 0px;
+
 	}
 }
 
