@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 .home-bg {
-	background-color: rgba(25,200,50, 0.6);
+	background-color: rgba(175,175,175, 0.6);
 }
 .letstravel-bg  {
 	background-color: rgba(25,200,50, 0.6);
@@ -177,6 +177,11 @@
 		font-size: 13pt;
 }
 
+.aboutWell li {
+	vertical-align: middle;
+	font-size: 2em;
+}
+
 .letsTravelWell {
 	border-radius: 50px;
 	border: none;
@@ -194,11 +199,12 @@
 .letsTravelWell h4 {
 	text-align: center;
 	font-weight: normal;
-	color: white;
+	color: black;
 }
 
 .letsTravelWell img {
-	display:inline-block;
+		display:block;
+    margin:auto;
 }
 
 .pack {
@@ -206,10 +212,6 @@
 	border-radius: 50px;
 	box-shadow: 0px 0px 15px #888888;
 	margin: 2%;
-}
-
-.pack:hover {
-	cursor:pointer;
 }
 
 #appIcon {
@@ -250,7 +252,7 @@
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	.aboutWell {
 		float: none;
 		display: inline-block;
@@ -288,6 +290,14 @@
 		display: inline-block;
 		width:100px;
 	}
+
+	.letsTravelWell {
+		width: 100%;
+		float: none;
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	.jumbotron {
 		height: 150px;
 	}
@@ -301,7 +311,10 @@
 		position:relative;
 		top: 0px;
 		left: 0px;
+	}
 
+	.carousel-inner > .item > img {
+		height: 260px;
 	}
 }
 
@@ -333,4 +346,20 @@ footer a:hover {
 
 .icons {
 	border-radius: 30px;
+}
+
+.carousel-inner > .item > img {
+  border-radius: 30px;
+	height: 340px;
+}
+
+.carousel-caption {
+	background-color: rgba(100, 100, 100, 0.3);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-radius: 100px;
+}
+
+.center {
+	text-align: center;
 }
